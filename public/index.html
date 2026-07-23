@@ -7,22 +7,40 @@
         <link rel = "stylesheet" href = "../src/styles.css"></script>
     </head>
     <body>
+
+        <!-- layer 1: 3D spline embed underlayer -->
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+        <spline-viewer id = "photo-layer" url="https://prod.spline.design/6OGX0IFAGJtsIlhT/scene.splinecode" ></spline-viewer>
+
+
+        <!-- layer 2: frame overlayer + all image interaction -->
         <div id = "photo-frame">
-            <!-- within here are the nav bar and interactive buttons -->
-             <nav>
-                <!--art-->
-                <a href = "../public/art.html">art</a>
-                <!--code and engineering, i guess-->
-                <a href = "../public/engineering.html">code and engineering</a>
-                <!--contact-->
-                <a href = "../public/contact.html">contact</a>
-             </nav>
-            
+            <!--left row-->
+            <h1>>|<</h1>
+            <!-- central text-->
+            <div id = "center-column">
+                <p>---</p>
+                <h1>jana's camera</h1>
+                <p>---</p>
+            </div>
+    
+            <!--right row; -->
+            <h1>>|<</h1>
+
         </div>
-        <div id = "photo-page">
-            <!-- this is where the 3D interactive page will be -->
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
-            <spline-viewer id = "photo-layer" url="https://prod.spline.design/6OGX0IFAGJtsIlhT/scene.splinecode" ></spline-viewer>
-        </div>
+
+        <!-- layer 3: overlay nav on top of frame -->
+        <nav>
+            <!--art-->
+            <a href = "../public/art.html">art</a>
+            <!--code and engineering, i guess-->
+            <a href = "../public/engineering.html">code and engineering</a>
+            <!--contact-->
+            <a href = "../public/contact.html">contact</a>
+        </nav>
+
+        <!-- layer 4: aesthetic noise overlay -->
+        <div id = "noise-overlay"></div>
+
     </body>
 </html>
