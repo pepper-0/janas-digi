@@ -5,27 +5,32 @@
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
         <title>jana's camera</title>
         <link rel = "stylesheet" href = "../src/styles.css"></script>
+        <script src = "../public/script.js" defer></script>
     </head>
     <body>
 
         <!-- layer 1: 3D spline embed underlayer -->
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
-        <spline-viewer id = "photo-layer" url="https://prod.spline.design/6OGX0IFAGJtsIlhT/scene.splinecode" ></spline-viewer>
-
+        <spline-viewer id = "photo-layer" url="https://prod.spline.design/hfigeTY8T6eo9ahD/scene.splinecode"></spline-viewer>
 
         <!-- layer 2: frame overlayer + all image interaction -->
         <div id = "photo-frame">
             <!--left row-->
-            <h1>>|<</h1>
+            <div class = "side-column">✰<br><br>꧂<br><br><br>˖⁺</div>
+
             <!-- central text-->
             <div id = "center-column">
-                <p>---</p>
-                <h1>jana's camera</h1>
-                <p>---</p>
+                <p id = "verse">.</p>
+                <br>
+                <hr>
+                <p class = "central-text">jana's camera</p>
+                <hr>
+                <br>
+                <p id = "information">some random text that ill sub in for something more interesting later</p>
             </div>
     
             <!--right row; -->
-            <h1>>|<</h1>
+            <div class = "side-column">✰<br><br>꧂<br><br><br>˖⁺</div>
 
         </div>
 
@@ -33,6 +38,8 @@
         <nav>
             <!--art-->
             <a href = "../public/art.html">art</a>
+            <!--a maker's diary-->
+            <a href = "../public/diary.html">a maker's diary</a>
             <!--code and engineering, i guess-->
             <a href = "../public/engineering.html">code and engineering</a>
             <!--contact-->

@@ -1,13 +1,33 @@
+/* KEYFRAMES */
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GENERAL/GLOBAL */
 body {
     margin: 0;
     padding: 0;
     font-family: Helvetica, Arial, sans-serif;
     color: rgb(248, 248, 228);
-
+    background: rgb(71, 105, 79);
     position: relative;
     display: block;
 }
 
+.central-text {
+    font-size: 100px;
+}
+
+hr {
+    width: 100%;
+}
+
+/* INDEX.HTML */
+    /* layer 1: photo-layer */
 #photo-layer {
     position: absolute;
     border: 80px solid rgb(71, 105, 79);
@@ -15,7 +35,7 @@ body {
     height: calc(100vh - 160px);
     z-index: 0;
 }
-
+    /* layer 2: photo-frame */
 #photo-frame {
     position: absolute;
     border: 80px solid rgb(71, 105, 79);
@@ -26,8 +46,36 @@ body {
 
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
+#photo-frame * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 2s ease-out forwards;
+}
+
+.side-column {
+    text-align: center;
+    font-size: large;
+    width: 25%;
+    
+}
+
+#center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    width: 50%;
+}
+
+#verse {
+    width: 70%;
+}
+
+    /* layer 3: overlay nav */
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,17 +90,22 @@ a {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px solid rgb(248, 248, 228);
+    /* border: 1px solid rgb(248, 248, 228); */
     color: rgb(248, 248, 228);
     z-index: 2;
+    font-size: large;
+    text-decoration: none;
 }
 
 a:hover {
-    background-color: rgb(192, 192, 174);
+    /* background-color: rgb(192, 192, 174); */
+    transform: translateY(-5px);
+    text-decoration-line: underline;
     /* move up */
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
+    /* layer 4: noise overlay */
 #noise-overlay {
     position: absolute;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P4//8/AwAI/AL+fQnVAAAAAElFTkSuQmCC");
@@ -67,7 +120,8 @@ a:hover {
 
 
 
-/* INDEX */
+/* ART */
+
 #photo-frame {
     margin: 0;
     padding: 0;
