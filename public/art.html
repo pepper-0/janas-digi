@@ -8,13 +8,22 @@
         <script src = "../static/script.js" defer ></script>
     </head>
     <body>
+        <a href = "../public/index.html" id = "back-button">back</a>
+        <!-- wrapper container -->
         <div id = "gallery-container">
-            <div id = "images">
-                <img src = "contact_digi.png"/>
-                <img src = "contact_digi.png"/>
-                <img src = "contact_digi.png"/>
+            <h3>my favorites</h3>
+            <!-- image container-->
+            <div class = "image">
+                <div class = "exit">X</div>
+                <img src = "../public/photographer.jpg"/>
             </div>
-
+        </div>
+        <div id = "moodboard-container">
+            <h3>all my art</h3>
+            <div class = "moodboard-item">
+                <img class = "moodboard-image" src = "../public/photographer.jpg">
+                <p class = "moodboard-description">[ 01 ]</p>
+            </div>
         </div>
     </body>
 </html>

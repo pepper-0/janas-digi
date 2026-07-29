@@ -26,6 +26,15 @@ hr {
     width: 100%;
 }
 
+#back-button {
+    border: 1px solid rgb(248, 248, 228);
+    animation: fadeSlideIn 2s ease-out forwards;
+    transform: translateY(20px);
+    opacity: 0;
+    margin: 10px;
+    
+}
+
 /* INDEX.HTML */
     /* layer 1: photo-layer */
 #photo-layer {
@@ -98,7 +107,6 @@ a {
 }
 
 a:hover {
-    /* background-color: rgb(192, 192, 174); */
     transform: translateY(-5px);
     text-decoration-line: underline;
     /* move up */
@@ -117,17 +125,7 @@ a:hover {
     z-index: 10;
 }
 
-
-
-
-/* ART */
-
-#photo-frame {
-    margin: 0;
-    padding: 0;
-    /* height: calc(100vh - 160px); */
-    /* border: 80px solid rgb(70, 102, 70); */
-}
+/* CONTACT */
 
 #camera-frame {
     /* width: 90vw; */
@@ -148,29 +146,57 @@ a:hover {
 
 /* ART */
 #gallery-container {
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform-style: preserve-3d;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    white-space: nowrap;
+    height: fit-content;
 }
 
-#images {
+.image {
+    width: fit-content;
+}
+
+.image img {
+    padding: 10px;
+    max-width: 400px;
+    overflow: auto;
+    border-radius: 20%;
     position: relative;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
+    z-index: 0;
 }
 
-#gallery-container img {
+.exit {
     position: absolute;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: transform .4s ease;
-    cursor: pointer
+    z-index: 10;
+    width: 30px;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid rgb(248, 248, 228);
+    background-color: rgba(29, 21, 21, 0.637);
+    bottom: 10px;
+    right: 10px;
+}
+
+#moodboard-container {
+    width: 90%;
+    display: inline;
+    width: fit-content;
+}
+
+.moodboard-image {
+    max-width: 300px;
+}
+
+.moodboard-description {
+    width: fit-content;
+}
+
+.moodboard-description:hover {
+    transform: translateY(-5px);
+    text-decoration-line: underline;
+    /* move up */
+    transition: transform 0.5s ease;
 }
