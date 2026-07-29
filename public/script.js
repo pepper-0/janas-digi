@@ -7,12 +7,3 @@ var verses = ["ask, and it will be given to you; seek, and you will find; knock,
 
 // load a new verse every time page is newly loaded
 document.getElementById("verse").innerHTML = verses[Math.floor(Math.random() * verses.length)];
-
-/* ART.HTML */
-// read in csv file
-var moodboar// temp use placeholder 
-
-document.createElement()
-
-// load all gallery images function
-// load with "general"
