@@ -1,13 +1,5 @@
 /* ART.HTML */
 
-var flkty = new Flickity( '.main-carousel', {
-    wrapAround: true,
-    cellAlign: 'left',
-    contain: true
-});
-
-
-
 const artFile = "../public/art/art.json"
 
 // read in art data file
@@ -41,36 +33,64 @@ async function init() {
 init();
 
 
-// load all gallery images function
+// load all gallery and carousel images function
+var carouselContainer = document.getElementById("main-carousel");
 var moodboardContainer = document.getElementById("moodboard-container");
 
+// the ones to be added to the carousel
+let newCells = [];
+
 function loadGalleryImages() {
+
     console.log("called");
     for (let i = 0; i < artData.length; i++) { // error here that i dont wanna fix rn
         var piece = artData[i];
 
-        console.log("yes things are happening rn")
-        console.log(piece);
+        if (piece.tags.includes("favorites")) { // put in upper carousel
 
-        var newMoodboardItem = document.createElement('div');
+            var newCarouselCell = document.createElement('div');
+            newCarouselCell.classList.add("carousel-cell");
 
-        var newMoodboardImage = document.createElement('img')
-        newMoodboardImage.src = piece.path;
-        newMoodboardItem.appendChild(newMoodboardImage)
+            var newCarouselImage = document.createElement('img');
+            newCarouselImage.src = piece.path;
+            newCarouselCell.appendChild(newCarouselImage);
 
-        var newMoodboardCaption = document.createElement('p');
-        newMoodboardCaption.classList.add("moodboard-description")
+            var newCarouselCaption = document.createElement('p');
+            newCarouselCaption.classList.add("gallery-description");
+            newCarouselCaption.innerHTML = "[ " + piece.id + " ]";
+            newCarouselCell.appendChild(newCarouselCaption);
 
-        // var newMoodboardDescription = document.createElement('span');
-        // newMoodboardDescription.classList.add("hidden");
+            newCells.push(newCarouselCell);
 
-        newMoodboardCaption.innerHTML = "[ " + piece.id + " ]";
-        newMoodboardItem.appendChild(newMoodboardCaption);
+        } else {
+            var newMoodboardItem = document.createElement('div');
 
-        newMoodboardItem.classList.add('moodboard-item');
-        moodboardContainer.appendChild(newMoodboardItem);
+            var newMoodboardImage = document.createElement('img')
+            newMoodboardImage.src = piece.path;
+            newMoodboardItem.appendChild(newMoodboardImage)
+
+            var newMoodboardCaption = document.createElement('p');
+            newMoodboardCaption.classList.add("moodboard-description")
+
+            // var newMoodboardDescription = document.createElement('span');
+            // newMoodboardDescription.classList.add("hidden");
+
+            newMoodboardCaption.innerHTML = "[ " + piece.id + " ]";
+            newMoodboardItem.appendChild(newMoodboardCaption);
+
+            newMoodboardItem.classList.add('moodboard-item');
+            moodboardContainer.appendChild(newMoodboardItem);
+        }
+        
     }
 }
 
-// load with "general"
-loadGalleryImages();
+var flkty = new Flickity( '.main-carousel', {
+    wrapAround: true,
+    cellAlign: 'left',
+    contain: true
+});
+
+flkty.append(newCells)
+console.log("appended")
+console.log(newCells)
