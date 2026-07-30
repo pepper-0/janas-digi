@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "path": "../public/photographer.jpg",
+        "title": "tester snoopy",
+        "dimensions": "1x1",
+        "material": "image",
+        "description": "a cute pic of snoopy <3",
+        "tags": ["favorites"]
+    },
+    {
+        "id": 1,
+        "path": "../public/photographer.jpg",
+        "title": "Po Po",
+        "dimensions": "16x18",
+        "material": "colored pencil",
+        "description": "I’d known my grandparents as pairs— especially 公公 and 婆婆: “maternal grandfather and grandmother”. Since my birth, they’d come to take care of me once a week— until COVID hit, and my grandfather, 公公, passed. Now, my grandmother is the last living grandparent that I have. I do not see her often, but when I do, she often talks about my 公公. She’s a way to remember the past, a piece of history. I used graphite in this portrait to depict her as she played piano, likely thinking of the memories that define her life. The background that frames her, I imagine to be a representation of her as a person: thoughtful, pensive, and a little playful. In a way, I take after her, using this work to be a way to remember and honor her.",
+        "tags": ["favorites"]
+    },
+    {
+        "id": 3,
+        "path": "../public/photographer.jpg",
+        "title": "Swimming in Sweet Dreams",
+        "dimensions": "12x18",
+        "material": "colored pencil",
+        "description": "Some years ago, I approached a choice: to take home a Beanie Baby bear or a shark. Ultimately, I chose the shark. Throughout the years I cherished this stuffed animal, and thus found it fitting to become the subject of my artwork. In the same way that this shark has given me happiness and comfort, I gave him vibrant colors by layering different hues of colored pencils to shape and mold his appearance to the viewer. As this stuffed animal is a shark, I chose to show him in his natural element— water. By drawing the wave-like background in black, he would remain the central focus of the piece. This also helped me to dictate the composition of the artwork, by posing my shark in specific angles. By employing a bird's-eye perspective and angled tail fin, this stuffed animal can give off the impression of swimming through water. Ultimately, this drawing serves as a form of appreciation for the little moments which fulfill one’s childhood happiness and nostalgia. To see that even a small stuffed shark can carry such comfort can remind others of the simpler moments of life",
+        "tags": []
+    },
+    {
+        "id": 4,
+        "path": "../public/photographer.jpg",
+        "title": "",
+        "dimensions": "12x16",
+        "material": "colored pencil",
+        "description": "The Sensory Hands Project was both a challenging and exciting piece to work on. In the drawing, I decided to try using colored pencil to create a dreamlike effect, which was a challenging thing to try out. Though, the process of layering colored pencils to create the vibrant colors in my drawing was very fun experience. I found I learned a lot about how to create evenly blended colors, which was important for the piano, grass, mountains, and sky.",
+        "tags": []
+    }
+]
