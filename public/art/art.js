@@ -1,5 +1,13 @@
 /* ART.HTML */
 
+var flkty = new Flickity( '.main-carousel', {
+    wrapAround: true,
+    cellAlign: 'left',
+    contain: true
+});
+
+
+
 const artFile = "../public/art/art.json"
 
 // read in art data file
@@ -38,7 +46,7 @@ var moodboardContainer = document.getElementById("moodboard-container");
 
 function loadGalleryImages() {
     console.log("called");
-    for (let i = 0; i < artData.length; i++) {
+    for (let i = 0; i < artData.length; i++) { // error here that i dont wanna fix rn
         var piece = artData[i];
 
         console.log("yes things are happening rn")
@@ -50,10 +58,14 @@ function loadGalleryImages() {
         newMoodboardImage.src = piece.path;
         newMoodboardItem.appendChild(newMoodboardImage)
 
-        var newMoodboardDescription = document.createElement('p');
-        newMoodboardDescription.classList.add("moodboard-description")
-        newMoodboardDescription.innerHTML = "[ " + piece.id + " ]";
-        newMoodboardItem.appendChild(newMoodboardDescription);
+        var newMoodboardCaption = document.createElement('p');
+        newMoodboardCaption.classList.add("moodboard-description")
+
+        // var newMoodboardDescription = document.createElement('span');
+        // newMoodboardDescription.classList.add("hidden");
+
+        newMoodboardCaption.innerHTML = "[ " + piece.id + " ]";
+        newMoodboardItem.appendChild(newMoodboardCaption);
 
         newMoodboardItem.classList.add('moodboard-item');
         moodboardContainer.appendChild(newMoodboardItem);

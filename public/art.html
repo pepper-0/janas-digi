@@ -4,38 +4,58 @@
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
         <title>jana's camera</title>
-        <link rel = "stylesheet" href = "../src/styles.css"></script>
+        <link rel = "stylesheet" href = "../src/styles.css">
         <script src = "../public/art/art.js" defer ></script>
+        <link rel="stylesheet" href="../public/art/assets/flickity.css" media="screen">
+        <script src="../public/art/assets/flickity.pkgd.min.js"></script>
+
     </head>
     <body>
-        <a href = "../public/index.html" id = "back-button">back</a>
+        <nav>
+            <a href = "../public/index.html" id = "back-button">back</a>
+        </nav>
         <!-- wrapper container -->
-        <h3>my favorites</h3>
+        <h2>my favorites</h2>
         
-        <div id = "gallery-container">
+        <div class = "main-carousel js-flickity"
+            data-flickity-options='{ "cellAlign": "left", "contain": true }'>
             
             <!-- image container-->
 
-
-
-            <div class = "gallery-item">
+            <div class = "carousel-cell">
                 <img src = "../public/photographer.jpg"/>
                 <p class = "gallery-description">snoopy 1</p>
             </div>
 
-            <div class = "gallery-item">
+            <div class = "carousel-cell">
                 <img src = "../public/photographer.jpg"/>
                 <p class = "gallery-description">snoopy 2</p>
             </div>
 
-            <div class = "gallery-item">
+            <div class = "carousel-cell">
                 <img src = "../public/photographer.jpg"/>
                 <p class = "gallery-description">snoopy 3</p>
             </div>
 
+            <div class = "carousel-cell">
+                <img src = "../public/photographer.jpg"/>
+                <p class = "gallery-description">snoopy 4</p>
+            </div>
+
+            <div class = "carousel-cell">
+                <img src = "../public/photographer.jpg"/>
+                <p class = "gallery-description">snoopy 5</p>
+            </div>
+
         </div>
-        <h3>all my art</h3>
+
+
+        <h2>all my art</h2>
         <div id = "moodboard-container">
+            <div class = "moodboard-item">
+                <img src = "../public/photographer.jpg">
+                <p class = "moodboard-description">[ 00 ]<br><span class = "hidden">testing</span></p>
+            </div>
         </div>
     </body>
 </html>
